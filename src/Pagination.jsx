@@ -417,7 +417,11 @@ class Pagination extends React.Component {
             className={`${this.hasPrev() ? '' : `${prefixCls}-disabled`} ${prefixCls}-prev`}
             aria-disabled={!this.hasPrev()}
           >
-            {props.itemRender(prevPage, 'prev', this.getItemIcon(props.prevIcon, props.showTitle ? locale.prev_page : null))}
+            {props.itemRender(
+              prevPage,
+              'prev',
+              this.getItemIcon(props.prevIcon, props.showTitle ? locale.prev_page : null)
+            )}
           </li>
           <li
             title={props.showTitle ? `${this.state.current}/${allPages}` : null}
@@ -435,14 +439,17 @@ class Pagination extends React.Component {
             {allPages}
           </li>
           <li
-            title={}
             onClick={this.next}
             tabIndex={this.hasPrev() ? 0 : null}
             onKeyPress={this.runIfEnterNext}
             className={`${this.hasNext() ? '' : `${prefixCls}-disabled`} ${prefixCls}-next`}
             aria-disabled={!this.hasNext()}
           >
-            {props.itemRender(nextPage, 'next', this.getItemIcon(props.nextIcon, props.showTitle ? locale.next_page : null))}
+            {props.itemRender(
+              nextPage,
+              'next',
+              this.getItemIcon(props.nextIcon, props.showTitle ? locale.next_page : null)
+            )}
           </li>
           {gotoButton}
         </ul>
