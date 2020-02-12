@@ -20,13 +20,14 @@ const Pager = (props) => {
 
   return (
     <li
-      title={props.showTitle ? props.page : null}
       className={cls}
       onClick={handleClick}
       onKeyPress={handleKeyPress}
       tabIndex="0"
     >
-      {props.itemRender(props.page, 'page', <a>{props.page}</a>)}
+      {props.itemRender(props.page, 'page', <a
+        title={props.showTitle ? props.page : null}
+      >{props.page}</a>)}
     </li>
   );
 };
