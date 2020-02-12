@@ -410,14 +410,13 @@ class Pagination extends React.Component {
           {...dataOrAriaAttributeProps}
         >
           <li
-            title={props.showTitle ? locale.prev_page : null}
             onClick={this.prev}
             tabIndex={this.hasPrev() ? 0 : null}
             onKeyPress={this.runIfEnterPrev}
             className={`${this.hasPrev() ? '' : `${prefixCls}-disabled`} ${prefixCls}-prev`}
             aria-disabled={!this.hasPrev()}
           >
-            {props.itemRender(prevPage, 'prev', this.getItemIcon(props.prevIcon))}
+            {props.itemRender(prevPage, 'prev', this.getItemIcon(props.prevIcon, ))}
           </li>
           <li
             title={props.showTitle ? `${this.state.current}/${allPages}` : null}
@@ -630,7 +629,6 @@ class Pagination extends React.Component {
       >
         {totalText}
         <li
-          title={props.showTitle ? locale.prev_page : null}
           onClick={this.prev}
           tabIndex={prevDisabled ? null : 0}
           onKeyPress={this.runIfEnterPrev}
@@ -645,7 +643,6 @@ class Pagination extends React.Component {
         </li>
         {pagerList}
         <li
-          title={props.showTitle ? locale.next_page : null}
           onClick={this.next}
           tabIndex={nextDisabled ? null : 0}
           onKeyPress={this.runIfEnterNext}

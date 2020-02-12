@@ -26,7 +26,7 @@ const Pager = (props) => {
       tabIndex="0"
     >
       {props.itemRender(props.page, 'page', <a
-        title={props.showTitle ? props.page : null}
+        title={props.showTitle ? props.page + ' 페이지' : null}
       >{props.page}</a>)}
     </li>
   );
