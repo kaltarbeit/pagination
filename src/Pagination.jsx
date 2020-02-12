@@ -161,12 +161,13 @@ class Pagination extends React.Component {
   /**
    * computed icon node that need to be rendered.
    * @param {React.ReactNode | React.ComponentType<PaginationProps>} icon received icon.
+   * @param title
    * @returns {React.ReactNode}
    */
-  getItemIcon = (icon) => {
+  getItemIcon = (icon, title) => {
     const { prefixCls } = this.props;
     let iconNode = icon
-      || <a className={`${prefixCls}-item-link`} />;
+      || <a title={title} className={`${prefixCls}-item-link`} />;
     if (typeof icon === 'function') {
       iconNode = React.createElement(icon, { ...this.props });
     }
@@ -416,7 +417,7 @@ class Pagination extends React.Component {
             className={`${this.hasPrev() ? '' : `${prefixCls}-disabled`} ${prefixCls}-prev`}
             aria-disabled={!this.hasPrev()}
           >
-            {props.itemRender(prevPage, 'prev', this.getItemIcon(props.prevIcon, ))}
+            {props.itemRender(prevPage, 'prev', this.getItemIcon(props.prevIcon, props.showTitle ? locale.prev_page : null))}
           </li>
           <li
             title={props.showTitle ? `${this.state.current}/${allPages}` : null}
@@ -434,14 +435,14 @@ class Pagination extends React.Component {
             {allPages}
           </li>
           <li
-            title={props.showTitle ? locale.next_page : null}
+            title={}
             onClick={this.next}
             tabIndex={this.hasPrev() ? 0 : null}
             onKeyPress={this.runIfEnterNext}
             className={`${this.hasNext() ? '' : `${prefixCls}-disabled`} ${prefixCls}-next`}
             aria-disabled={!this.hasNext()}
           >
-            {props.itemRender(nextPage, 'next', this.getItemIcon(props.nextIcon))}
+            {props.itemRender(nextPage, 'next', this.getItemIcon(props.nextIcon, props.showTitle ? locale.next_page : null))}
           </li>
           {gotoButton}
         </ul>
