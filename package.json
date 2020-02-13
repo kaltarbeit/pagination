@@ -1,6 +1,6 @@
 {
-  "name": "@kaltarbeit/rc-pagination",
-  "version": "1.20.13-ksd.3",
+  "name": "rc-pagination",
+  "version": "1.20.13-ksd.4",
   "description": "pagination ui component for react",
   "keywords": [
     "react",
@@ -73,6 +73,6 @@
     "react-lifecycles-compat": "^3.0.4"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/kaltarbeit"
   }
 }
