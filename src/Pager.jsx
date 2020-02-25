@@ -27,7 +27,7 @@ const Pager = (props) => {
           : (
             <a href="#none" onClick={handleClick}
               onKeyPress={handleKeyPress}
-              title={props.showTitle}
+              title={props.showTitle ? `${props.page}페이지` : null}
             >
               {props.page}
             </a>
