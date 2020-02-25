@@ -487,8 +487,8 @@ class Pagination extends React.Component {
         );
       }
     } else {
-      const prevItemTitle = props.showLessItems ? locale.prev_3 : locale.prev_5;
-      const nextItemTitle = props.showLessItems ? locale.next_3 : locale.next_5;
+      // const prevItemTitle = props.showLessItems ? locale.prev_3 : locale.prev_5;
+      // const nextItemTitle = props.showLessItems ? locale.next_3 : locale.next_5;
       if (props.showPrevNextJumpers) {
         let jumpPrevClassString = `${prefixCls}-jump-prev`;
         if (props.jumpPrevIcon) {
