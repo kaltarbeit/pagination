@@ -496,7 +496,6 @@ class Pagination extends React.Component {
         }
         jumpPrev = (
           <li
-            title={props.showTitle ? prevItemTitle : null}
             key="prev"
             onClick={this.jumpPrev}
             tabIndex="0"
@@ -516,9 +515,7 @@ class Pagination extends React.Component {
         }
         jumpNext = (
           <li
-            title={props.showTitle ? nextItemTitle : null}
             key="next"
-            tabIndex="0"
             onClick={this.jumpNext}
             onKeyPress={this.runIfEnterJumpNext}
             className={jumpNextClassString}

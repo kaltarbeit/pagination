@@ -21,13 +21,15 @@ const Pager = (props) => {
   return (
     <li
       className={cls}
-      onClick={handleClick}
-      onKeyPress={handleKeyPress}
-      tabIndex="0"
     >
-      {props.itemRender(props.page, 'page', <a
-        title={props.showTitle ? `${props.page}페이지` : null}
-      >{props.page}</a>)}
+      {props.itemRender(props.page, 'page', props.active ?
+        (<a
+        title='현재 페이지'>{props.page}</a>)
+        : (<a href="#none"
+           onClick={handleClick}
+           onKeyPress={handleKeyPress}
+           title={props.showTitle}>{props.page}</a>)
+      )}
     </li>
   );
 };
