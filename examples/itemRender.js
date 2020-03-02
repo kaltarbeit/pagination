@@ -1,12 +1,13 @@
-webpackJsonp([12],{
+webpackJsonp([11],{
 
-/***/ 173:
+/***/ 176:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-throw new Error("Cannot find module \"rc-pagination/assets/index.less\"");
-throw new Error("Cannot find module \"rc-pagination\"");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rc_pagination_assets_index_less__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rc_pagination_assets_index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rc_pagination_assets_index_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rc_pagination__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_dom__ = __webpack_require__(1);
@@ -40,19 +41,19 @@ var textItemRender = function textItemRender(current, type, element) {
 __WEBPACK_IMPORTED_MODULE_3_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
   'div',
   null,
-  __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_rc_pagination___default.a, { total: 100, itemRender: itemRender }),
-  __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_rc_pagination___default.a, { total: 100, itemRender: textItemRender })
+  __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_rc_pagination__["a" /* default */], { total: 100, itemRender: itemRender }),
+  __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_rc_pagination__["a" /* default */], { total: 100, itemRender: textItemRender })
 ), document.getElementById('__react-content'));
 
 /***/ }),
 
-/***/ 195:
+/***/ 203:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(173);
+module.exports = __webpack_require__(176);
 
 
 /***/ })
 
-},[195]);
+},[203]);
 //# sourceMappingURL=itemRender.js.map
