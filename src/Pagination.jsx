@@ -552,7 +552,7 @@ class Pagination extends React.Component {
           key={allPages}
           page={allPages}
           active={false}
-          title="첫 페이지"
+          title="마지막 페이지"
           showTitle={props.showTitle}
           itemRender={props.itemRender}
         />
@@ -566,7 +566,7 @@ class Pagination extends React.Component {
           key={1}
           page={1}
           active={false}
-          title="마지막 페이지"
+          title="첫 페이지"
           showTitle={props.showTitle}
           itemRender={props.itemRender}
         />
