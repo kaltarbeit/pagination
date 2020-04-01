@@ -411,14 +411,14 @@ class Pagination extends React.Component {
           {...dataOrAriaAttributeProps}
         >
           <li
-            tabIndex={this.hasPrev() ? 0 : null}
             className={`${this.hasPrev() ? '' : `${prefixCls}-disabled`} ${prefixCls}-prev`}
           >
             <a
-              href={this.hasPrev() ? '#none' : null}
-              onKeyPress={this.runIfEnterPrev}
-              onClick={this.prev}
+              href={this.hasPrev() ? '#prev' : null}
+              onKeyPress={e => { this.runIfEnterPrev(); e.preventDefault(); }}
+              onClick={e => { this.prev(); e.preventDefault(); }}
               aria-disabled={!this.hasPrev()}
+              title="이전페이지"
             >
               {props.itemRender(
                 prevPage,
@@ -444,17 +444,23 @@ class Pagination extends React.Component {
             {allPages}
           </li>
           <li
-            onClick={this.next}
             tabIndex={this.hasPrev() ? 0 : null}
-            onKeyPress={this.runIfEnterNext}
             className={`${this.hasNext() ? '' : `${prefixCls}-disabled`} ${prefixCls}-next`}
             aria-disabled={!this.hasNext()}
           >
-            {props.itemRender(
-              nextPage,
-              'next',
-              this.getItemIcon(props.nextIcon)
-            )}
+            <a
+              href={this.hasNext() ? '#next' : null}
+              onKeyPress={e => { this.runIfEnterNext(); e.preventDefault(); }}
+              onClick={e => { this.next(); e.preventDefault(); }}
+              aria-disabled={!this.hasNext()}
+              title="다음페이지"
+            >
+              {props.itemRender(
+                nextPage,
+                'next',
+                this.getItemIcon(props.nextIcon)
+              )}
+            </a>
           </li>
           {gotoButton}
         </ul>
