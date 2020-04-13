@@ -414,11 +414,11 @@ class Pagination extends React.Component {
             className={`${this.hasPrev() ? '' : `${prefixCls}-disabled`} ${prefixCls}-prev`}
           >
             <a
-              href={this.hasPrev() ? '#prev' : null}
+              href={this.hasPrev() ? '#prev' : '#none'}
               onKeyPress={e => { this.runIfEnterPrev(); e.preventDefault(); }}
               onClick={e => { this.prev(); e.preventDefault(); }}
               aria-disabled={!this.hasPrev()}
-              title="이전페이지"
+              title={this.hasPrev() ? '이전페이지' : '이전페이지 없음'}
             >
               {props.itemRender(
                 prevPage,
@@ -449,11 +449,11 @@ class Pagination extends React.Component {
             aria-disabled={!this.hasNext()}
           >
             <a
-              href={this.hasNext() ? '#next' : null}
+              href={this.hasNext() ? '#next' : '#none'}
               onKeyPress={e => { this.runIfEnterNext(); e.preventDefault(); }}
               onClick={e => { this.next(); e.preventDefault(); }}
               aria-disabled={!this.hasNext()}
-              title="다음페이지"
+              title={this.hasNext() ? '이전페이지' : '다음페이지 없음'}
             >
               {props.itemRender(
                 nextPage,
