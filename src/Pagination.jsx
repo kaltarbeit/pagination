@@ -453,7 +453,7 @@ class Pagination extends React.Component {
               onKeyPress={e => { this.runIfEnterNext(); e.preventDefault(); }}
               onClick={e => { this.next(); e.preventDefault(); }}
               aria-disabled={!this.hasNext()}
-              title={this.hasNext() ? '이전페이지' : '다음페이지 없음'}
+              title={this.hasNext() ? '다음페이지' : '다음페이지 없음'}
             >
               {props.itemRender(
                 nextPage,
